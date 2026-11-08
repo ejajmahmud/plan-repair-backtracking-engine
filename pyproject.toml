@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plan-repair-backtracking-engine"
+version = "0.1.0"
+description = "Backtracking state graph repair engine generating surgical plan patches when intermediate tool steps fail"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+plan-repair-backtracking-engine = "plan_repair_backtracking_engine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["plan_repair_backtracking_engine*"]
